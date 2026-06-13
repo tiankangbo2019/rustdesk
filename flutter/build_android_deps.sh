@@ -66,6 +66,8 @@ function build {
 
   echo "*** [$ANDROID_ABI][Start] Build and install vcpkg dependencies"
   pushd "$SCRIPTDIR/.."
+  export CFLAGS="-D_GNU_SOURCE -D_ANDROID_API_=$API_LEVEL"
+  export CXXFLAGS="-D_GNU_SOURCE -D_ANDROID_API_=$API_LEVEL"
   $VCPKG_ROOT/vcpkg install --triplet $VCPKG_TARGET --x-install-root="$VCPKG_ROOT/installed"
   popd
   head -n 100 "${VCPKG_ROOT}/buildtrees/ffmpeg/build-$VCPKG_TARGET-rel-out.log" || true
