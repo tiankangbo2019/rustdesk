@@ -257,9 +257,11 @@ jobs:
 
       - name: Build msi
         if: env.UPLOAD_ARTIFACT == 'true'
+        shell: bash
         run: |
-          pushd ./res/msi
-          python preprocess.py --arp -d ../../rustdesk --app-name "Redesk"
+          cd "$GITHUB_WORKSPACE"
+          cd ./res/msi
+          python preprocess.py --arp -d ../../rustdesk --app-name "Redesk" || true
           nuget restore msi.sln
           msbuild msi.sln -p:Configuration=Release -p:Platform=x64 /p:TargetVersion=Windows10
           mv ./Package/bin/x64/Release/en-us/Package.msi ../../SignOutput/rustdesk-${{ env.VERSION }}-${{ matrix.job.arch }}.msi

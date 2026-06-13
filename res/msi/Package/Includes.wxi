@@ -2,6 +2,14 @@
 <Include xmlns="http://wixtoolset.org/schemas/v4/wxs">
 
 	<!--$PreVarsStart$-->
+	<?define Version="1.4.6" ?>
+	<?define Manufacturer="PURSLANE" ?>
+	<?define Product="Redesk" ?>
+	<?define Description="Redesk Installer" ?>
+	<?define ProductLower="redesk" ?>
+	<?define RegKeyRoot=".redesk" ?>
+	<?define RegKeyInstall=".redesk\Install" ?>
+	<?define UpgradeCode = "00000000-0000-0000-0000-000000000001" ?>
 	<!--$PreVarsEnd$-->
 
 </Include>
