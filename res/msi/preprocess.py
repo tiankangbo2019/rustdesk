@@ -465,7 +465,10 @@ def init_global_vars(dist_dir, app_name, args):
             shell=True,
         )
         output, _ = process.communicate()
-        return output.decode("utf-8").strip()
+        try:
+            return output.decode("utf-8").strip()
+        except UnicodeDecodeError:
+            return output.decode("gbk").strip()
 
     global g_version
     global g_build_date
