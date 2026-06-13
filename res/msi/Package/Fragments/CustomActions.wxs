@@ -1,6 +1,13 @@
-﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
 	<Fragment>
-		<?include ../Includes.wxi?>
+		<?define Version="1.4.6" ?>
+		<?define Manufacturer="PURSLANE" ?>
+		<?define Product="Redesk" ?>
+		<?define Description="Redesk Installer" ?>
+		<?define ProductLower="redesk" ?>
+		<?define RegKeyRoot=".redesk" ?>
+		<?define RegKeyInstall=".redesk\Install" ?>
+		<?define UpgradeCode = "00000000-0000-0000-0000-000000000001" ?>
 
 		<Binary Id="Custom_Actions_Dll" SourceFile="$(var.CustomActions.TargetDir)$(var.CustomActions.TargetName).dll" />
 

@@ -2,7 +2,15 @@
 	xmlns:fire="http://wixtoolset.org/schemas/v4/wxs/firewall">
 	<Fragment>
 
-		<?include ../Includes.wxi?>
+		<?define Version="1.4.6" ?>
+		<?define Manufacturer="PURSLANE" ?>
+		<?define Product="Redesk" ?>
+		<?define Description="Redesk Installer" ?>
+		<?define ProductLower="redesk" ?>
+		<?define RegKeyRoot=".redesk" ?>
+		<?define RegKeyInstall=".redesk\Install" ?>
+		<?define UpgradeCode = "00000000-0000-0000-0000-000000000001" ?>
+		<?define BuildDir="../../rustdesk" ?>
 
 		<DirectoryRef Id="INSTALLFOLDER_INNER" FileSource="$(var.BuildDir)">
 			<Component Id="App.exe" Guid="620F0F69-4C17-4320-A619-495E329712A4">
