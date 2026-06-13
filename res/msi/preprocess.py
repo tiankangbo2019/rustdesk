@@ -150,7 +150,7 @@ def gen_auto_component(app_name, dist_dir):
     )
 
 
-def gen_pre_vars(args, dist_dir):
+def gen_pre_vars(args, dist_dir, app_name):
     def func(lines, index_start):
         upgrade_code = uuid.uuid5(uuid.NAMESPACE_OID, app_name + ".exe")
 
@@ -535,7 +535,7 @@ if __name__ == "__main__":
 
     update_license_file(app_name)
 
-    if not gen_pre_vars(args, dist_dir):
+    if not gen_pre_vars(args, dist_dir, app_name):
         sys.exit(-1)
 
     if app_name != "RustDesk":
