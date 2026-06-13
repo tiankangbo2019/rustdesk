@@ -644,7 +644,7 @@ Future<bool?> loginDialog() async {
             onLogin: onLogin,
             userFocusNode: userFocusNode,
           ),
-          thirdAuthWidget(),
+          // thirdAuthWidget(), // Webauth login options disabled
         ],
       ),
       onCancel: onDialogCancel,

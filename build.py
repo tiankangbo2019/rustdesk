@@ -579,7 +579,7 @@ def main():
     '''.format(pa))
                 system2(
                     'create-dmg "RustDesk %s.dmg" "target/release/bundle/osx/RustDesk.app"' % version)
-                os.rename('RustDesk %s.dmg' %
+                os.rename('Redesk %s.dmg' %
                           version, 'rustdesk-%s.dmg' % version)
                 if pa:
                     system2('''
