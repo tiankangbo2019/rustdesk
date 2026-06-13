@@ -1,7 +1,6 @@
-﻿<Project Sdk="WixToolset.Sdk/4.0.5">
+<Project Sdk="WixToolset.Sdk/4.0.5">
   <PropertyGroup>
-    <IncludeSearchPaths>
-    </IncludeSearchPaths>
+    <IncludeSearchPaths>$(MSBuildProjectDirectory);$(MSBuildProjectDirectory)\Components;$(MSBuildProjectDirectory)\Fragments;$(MSBuildProjectDirectory)\UI</IncludeSearchPaths>
     <Configurations>Release</Configurations>
     <Platforms>x64</Platforms>
   </PropertyGroup>
