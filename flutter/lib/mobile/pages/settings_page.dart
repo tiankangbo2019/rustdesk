@@ -943,8 +943,7 @@ class _SettingsState extends State<SettingsPage> with WidgetsBindingObserver {
             tiles: enhancementsTiles,
           ),
         ],
-      ),
-    );
+      );
     return settings;
   }
 
