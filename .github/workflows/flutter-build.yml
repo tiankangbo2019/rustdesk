@@ -257,15 +257,16 @@ jobs:
 
       - name: Build msi
         if: env.UPLOAD_ARTIFACT == 'true'
-        shell: bash
+        shell: pwsh
         run: |
-          cd "$GITHUB_WORKSPACE"
-          cd ./res/msi
-          python preprocess.py --arp -d ../../rustdesk --app-name "Redesk" || true
+          Set-Location -Path "$env:GITHUB_WORKSPACE\res\msi"
+          python preprocess.py --arp -d ../../rustdesk --app-name "Redesk" 2>&1 | Out-Null
           nuget restore msi.sln
           msbuild msi.sln -p:Configuration=Release -p:Platform=x64 /p:TargetVersion=Windows10
-          mv ./Package/bin/x64/Release/en-us/Package.msi ../../SignOutput/rustdesk-${{ env.VERSION }}-${{ matrix.job.arch }}.msi
-          sha256sum ../../SignOutput/rustdesk-*.msi
+          if (Test-Path ".\Package\bin\x64\Release\en-us\Package.msi") {
+            Move-Item -Path ".\Package\bin\x64\Release\en-us\Package.msi" -Destination "$env:GITHUB_WORKSPACE\SignOutput\rustdesk-${{ env.VERSION }}-${{ matrix.job.arch }}.msi" -Force
+          }
+          Get-ChildItem -Path "$env:GITHUB_WORKSPACE\SignOutput\rustdesk-*.msi" | ForEach-Object { sha256sum $_.FullName }
 
       - name: Sign rustdesk self-extracted file
         if: env.UPLOAD_ARTIFACT == 'true' && env.SIGN_BASE_URL != '-2'
