@@ -8,6 +8,7 @@
 	<?define RegKeyRoot=".redesk" ?>
 	<?define RegKeyInstall=".redesk\Install" ?>
 	<?define UpgradeCode = "00000000-0000-0000-0000-000000000001" ?>
+	<?define BuildDate="2026-06-14 00:00" ?>
 
 	<Fragment>
 		<!-- Regs for shortcuts are defined in "Fragments/ShortcutProperties.wxs" -->
