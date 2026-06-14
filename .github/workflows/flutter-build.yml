@@ -265,7 +265,7 @@ jobs:
           $signOutputDir = Join-Path $workspace "SignOutput"
           
           Set-Location $msiDir
-          python preprocess.py --arp -d $rustdeskDir --app-name "Redesk" --exe-name "rustdesk"
+          python preprocess.py --arp -d $rustdeskDir --app-name "Redesk"
           nuget restore msi.sln
           msbuild msi.sln -p:Configuration=Release -p:Platform=x64 /p:TargetVersion=Windows10
           
