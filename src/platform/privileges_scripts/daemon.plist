@@ -3,10 +3,10 @@
 <plist version="1.0">
     <dict>
         <key>Label</key>
-        <string>com.carriez.RustDesk_service</string>
+        <string>asia.redesk.ReDesk_service</string>
 
 	<key>AssociatedBundleIdentifiers</key>
-	<string>com.carriez.rustdesk</string>
+	<string>asia.redesk.app</string>
     
         <key>KeepAlive</key>
         <true/>

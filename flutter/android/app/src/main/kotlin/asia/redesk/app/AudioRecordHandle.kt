@@ -1,4 +1,4 @@
-package com.carriez.flutter_hbb
+package asia.redesk.app
 
 import ffi.FFI
 

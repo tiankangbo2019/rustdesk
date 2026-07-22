@@ -3,10 +3,10 @@
 <plist version="1.0">
     <dict>
         <key>Label</key>
-        <string>com.carriez.RustDesk_server</string>
+        <string>asia.redesk.ReDesk_server</string>
 
 	<key>AssociatedBundleIdentifiers</key>
-	<string>com.carriez.rustdesk</string>
+	<string>asia.redesk.app</string>
     
         <key>LimitLoadToSessionType</key>
         <array>

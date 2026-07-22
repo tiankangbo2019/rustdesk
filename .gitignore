@@ -56,3 +56,9 @@ vcpkg_installed
 flutter/lib/generated_plugin_registrant.dart
 libsciter.dylib
 flutter/web/
+# signing keys
+*.jks
+*.keystore
+flutter/key.properties
+flutter/keystore-base64.txt
+jdk17.zip
