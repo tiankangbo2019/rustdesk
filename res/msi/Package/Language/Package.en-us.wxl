@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 This file contains the declaration of all the localizable strings.
 -->
 <WixLocalization Culture="en-us" Codepage="1252"
@@ -10,13 +10,13 @@ This file contains the declaration of all the localizable strings.
 	<!-- General strings -->
 	<String Id="DowngradeError" Value="A newer version of [ProductName] is already installed." />
 
-	<String Id="AR_Comment" Value="RustDesk" />
+	<String Id="AR_Comment" Value="ReDesk" />
 
-	<String Id="F_App" Value="RustDesk" />
-	<String Id="F_App_Desc" Value="RustDesk - Main programs installations." />
+	<String Id="F_App" Value="ReDesk" />
+	<String Id="F_App_Desc" Value="ReDesk - Main programs installations." />
 
-	<String Id="SC_Uninstall" Value="Uninstall RustDesk" />
-	<String Id="SC_Uninstall_Desc" Value="Removes RustDesk or parts of it from the computer" />
+	<String Id="SC_Uninstall" Value="Uninstall ReDesk" />
+	<String Id="SC_Uninstall_Desc" Value="Removes ReDesk or parts of it from the computer" />
 
 	<!-- Client related strings -->
 	<String Id="F_Client" Value="Client" />
@@ -26,11 +26,11 @@ This file contains the declaration of all the localizable strings.
 	<String Id="F_LAVFilters" Value="LAV Filters" />
 	<String Id="F_LAVFilters_Desc" Value="Recommended directshow filters for best audio and video playback experience." />
 
-	<String Id="SC_Client" Value="RustDesk" />
-	<String Id="SC_Client_Desc" Value="Start RustDesk." />
+	<String Id="SC_Client" Value="ReDesk" />
+	<String Id="SC_Client_Desc" Value="Start ReDesk." />
 
-	<String Id="SC_Client_Tray" Value="RustDesk Tray" />
-	<String Id="SC_Client_Tray_Desc" Value="Start RustDesk tray." />
+	<String Id="SC_Client_Tray" Value="ReDesk Tray" />
+	<String Id="SC_Client_Tray_Desc" Value="Start ReDesk tray." />
 
 	<!-- Server related strings -->
 	<String Id="F_Server" Value="Server" />
@@ -51,6 +51,6 @@ This file contains the declaration of all the localizable strings.
 
 	<String Id="MyInstallDirDlgDesktopShortcuts" Value="Create desktop icon" />
 	<String Id="MyInstallDirDlgStartMenuShortcuts" Value="Create start menu shortcuts" />
-	<String Id="MyInstallDirDlgPrinter" Value="Install RustDesk Printer" />
+	<String Id="MyInstallDirDlgPrinter" Value="Install ReDesk Printer" />
 
 </WixLocalization>
